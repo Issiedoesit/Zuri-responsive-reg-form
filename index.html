@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/favicon-32x32 (1).png" type="image/icon type">
+    <script src="scripts.js" defer></script>
+    <script src="https://kit.fontawesome.com/1f5aa4ec6b.js" crossorigin="anonymous"></script>
+    <title>Registration Form</title>
+</head>
+<body>
+    <main>
+        <div class="sidetext">
+            <h1>
+                Learn to code by watching others
+            </h1>
+            <p>
+                See how experienced developers
+                solve problems in real time.
+                Watching scripted tutorials is great, 
+                but understanding how developers
+                think is invaluable.
+            </p>
+        </div>
+        <div class="formsegment" >
+            <div class="freetrialbanner">
+                <p><span>Try it free 7 days</span> then $20/mo, thereafter</p>
+            </div>
+            <form action="#" method="get" id="form" name="myForm"  >
+                <div class="container" id="contain_one">
+                    <input type="text" id="first_name" name="FirstName" pattern="^[a-zA-Z]+$" placeholder="First Name" required>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <img src="Images/icon-error.svg" alt="error" height="20px" width="20px"  class="error-icon">
+                    <p class="small" id="small_one">First name cannot be empty</p>
+                </div>
+                <div class="container" id="contain_two">
+                    <input type="text" id="last_name" name="LastName" pattern="" placeholder="Last Name" required>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <img src="Images/icon-error.svg" alt="error" height="20px" width="20px"  class="error-icon">
+                    <p class="small" id="small_two">Last name cannot be empty</p>
+                </div>
+                <div class="container" id="contain_three">
+                    <input type="email" id="email" name="emailAddress" placeholder="Email Address" required>
+                    <img src="Images/icon-error.svg" alt="error" height="20px" width="20px"  class="error-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p  class="small" id="small_three" >Looks like this is not an email</p>
+                </div>
+                <div class="container" id="contain_four">
+                    <input type="password" id="password"  name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="16" placeholder="Password" title="Enter at least 8 characters. It should have a combination of numbers, symbols, lowercase letters and UPPERCASE letter" required>
+                    <img src="Images/icon-error.svg" alt="error" height="20px" width="20px" class="error-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p class="small" id="whitespace">Password doesn't contain space (Advised!)</p>
+                    <p class="small" id="upper">Password doesn't contain UPPERCASE</p>
+                    <p class="small" id="symbol">Password doesn't contain symbol</p>
+                    <p class="small" id="lower">Password doesn't contain lowercase</p>
+                    <p class="small" id="number">Password doesn't contain number</p>
+                    <p class="small" id="eight">Password cannot be empty</p>
+                    <!--<p class="small" id="noupper">Password contains UPPERCASE</p>
+                    <p class="small" id="nosymbol">Password contains symbol</p>
+                    <p class="small" id="nolower">Password contains lowercase</p>
+                    <p class="small" id="nonumber">Password contains number</p>
+                    <p class="small" id="noeightletters">Password at least 8 letters</p>-->
+                </div>
+                <button type="submit" class="formbutton" onclick="mySubmit()">CLAIM YOUR FREE TRIAL</button>
+                <div class="terms">
+                    <p> By clicking this button, you are agreeing to our <a href="">Terms and Conditions</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

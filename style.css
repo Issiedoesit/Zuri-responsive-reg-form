@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --red:hsl(0, 100%, 74%);
+    --green:hsl(154, 59%, 51%);
+    --blue:hsl(248, 32%, 49%);
+    --dark-blue:hsl(249, 10%, 26%);
+    --grayish-blue:hsl(246, 25%, 77%);
+    --font-size: 16px;
+    --border-radius:7px;
+    --box-shadow:1px 6px rgba(133, 90, 144, 0.3);
+    --text-white:hsl(0, 100%, 100%);
+    --font-family:'Roboto', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: var(--font-family);
+    background-image: url(Images/bg-intro-desktop.png);
+    background-size:contain;
+    background-color: var(--red);
+}
+
+main{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 120px;
+   
+    
+}
+
+.sidetext{
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 50px;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--text-white);
+}
+.sidetext h1{
+    margin: 20px 0px;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.formsegment{
+    margin: auto;
+    width: 50%;
+    
+}
+
+.freetrialbanner{
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0px;
+    border-radius: var(--border-radius);
+    color:hsl(247deg 38% 87%);
+    box-shadow: var(--box-shadow);
+}
+
+form{
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--text-white);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    margin: 20px 0px;
+    box-shadow: var(--box-shadow);
+}
+
+.container{
+    margin: 10px;
+    position: relative;
+}
+
+.error-icon{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    visibility: hidden;
+}
+input{
+    width: 100%;
+    outline: none;
+    border: solid 2px hsl(0deg 0% 97%);
+    border-radius: var(--border-radius);
+    padding: 15px 30px;
+    font-family: inherit;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.small{
+    width: 100%;
+    text-align: right;
+    font-size: .7em;
+    font-weight: 700;
+    font-style: oblique;
+    color: var(--red);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.container.error{
+    padding-bottom: 20px;
+}
+
+.container.error:nth-child(4){
+    padding-bottom: 180px;
+}
+.container.error.newerror:nth-child(4) .error-icon{
+    visibility: hidden;
+}
+#whitespace{
+    visibility: hidden;
+    color: var(--green);
+}
+.container.error #whitespace{
+    top: 60px;
+    visibility: visible;
+}
+
+.container.error #upper{
+    top: 90px;
+}
+.container.error #symbol{
+    top: 120px;
+}
+
+.container.error #lower{
+    top: 150px;
+}
+
+.container.error #number{
+    top: 180px;
+}
+
+.container.error #eight{
+    top: 210px;
+}
+
+
+.container.error input {
+    border-color: var(--red);
+    padding: 12px 20px;
+}
+
+.container.error input:not(#email)::-webkit-input-placeholder{
+    color: transparent;
+}
+.container.error .small, .container.error .error-icon{
+    visibility: visible;
+}
+
+
+.freetrialbanner span{
+    color: var(--text-white);
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.container.success input {
+    border-color: var(--green);
+    padding: 12px 20px;
+}
+
+.fa-solid{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    color: var(--green);
+    font-size: 1.2em;
+}
+
+.pass-success{
+    color: var(--green);
+}
+
+.pass-error{
+    color: var(--green);
+}
+
+.fa-solid{
+    visibility: hidden;
+}
+.container.success .fa-solid{
+    visibility: visible;
+}
+input:focus{
+    outline: none;
+    border: solid 2px hsl(250deg 31% 80%);
+}
+::-ms-reveal {
+    padding-right: 40px;
+}
+.placeholder::-webkit-input-placeholder{
+    color: var(--red);
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.formbutton{
+    width: 90%;
+    margin: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-weight: 600;
+    background-color: var(--green);
+    color: var(--text-white);
+    box-shadow: 1px 4px hsl(153deg 55% 47%);
+}
+.formbutton:hover{
+    background-color: hsl(154deg 65% 68%);
+    cursor: pointer;
+}
+.terms{
+    font-weight: 700;
+    font-size: .7em;
+    color: var(--grayish-blue);
+}
+
+
+form a{
+    text-decoration: none;
+    color: var(--red);
+}
+
+@media only screen and (max-width:900px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .formsegment{
+        min-width: 70vw;
+        margin: 20px 0px;
+    }
+
+    .sidetext{
+        min-width: 70vw;
+        padding: 0 20px;
+        margin: 20px 0px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    body{
+        font-size: var(--font-size);
+        min-width: 375px;
+        background-image: url(Images/bg-intro-mobile.png);
+        background-size:contain;
+    }
+    main{
+        min-width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .formsegment{
+        min-width: 80vw;
+    }
+
+    .freetrialbanner{
+        margin-bottom: 30px;
+        padding: 30px 70px;
+    }
+
+    .sidetext{
+        min-width: 90vw;
+        margin: 30px 0px;
+        text-align: center;
+        font-family: inherit;
+       
+    }
+    .sidetext p{
+        font-weight: 500;
+        color: var(--text-white);
+    }
+    .sidetext h1{
+        font-size: 2em;
+        margin: 30px 0px;
+        line-height: 1.2em;
+    }
+}
